@@ -17,6 +17,10 @@ class Vehicles {
 		The vehicle has the fuel type: ${this.fuel_type}
 		The vehicle was produced in the year: ${this.year_of_production}`;
 	}
+
+	calcPrice() {
+		return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
+	}
 }
 
 
@@ -31,7 +35,7 @@ class Motor extends Vehicles {
 	}
 
 	vehicleInfo() {
-		return `${super.vehicleInfo()} 	This vehicle has a seigt height of: ${this.seat_height} inches.
+		return `${super.vehicleInfo()} 	This vehicle has a height of: ${this.seat_height} inches.
 										This vehicle has ${this.ccm} ccm.	`;
 	}
 }
@@ -60,3 +64,8 @@ console.log(motorbikes.vehicleInfo());
 
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000)
 console.log(truck.vehicleInfo());
+
+
+
+//Function calculation
+

@@ -25,6 +25,9 @@ var Vehicles = /** @class */ (function () {
     Vehicles.prototype.vehicleInfo = function () {
         return "The vehicles performance model is: " + this.performance_model + "\n\t\tThe vehicle has " + this.number_of_seats + " seats.\n\t\tThe vehicle has the fuel type: " + this.fuel_type + "\n\t\tThe vehicle was produced in the year: " + this.year_of_production;
     };
+    Vehicles.prototype.calcPrice = function () {
+        return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
+    };
     return Vehicles;
 }());
 var Motor = /** @class */ (function (_super) {
@@ -36,7 +39,7 @@ var Motor = /** @class */ (function (_super) {
         return _this;
     }
     Motor.prototype.vehicleInfo = function () {
-        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a seigt height of: " + this.seat_height + " inches.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has " + this.ccm + " ccm.\t";
+        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a height of: " + this.seat_height + " inches.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has " + this.ccm + " ccm.\t";
     };
     return Motor;
 }(Vehicles));
@@ -59,3 +62,4 @@ var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
 console.log(motorbikes.vehicleInfo());
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
 console.log(truck.vehicleInfo());
+//Function calculation
