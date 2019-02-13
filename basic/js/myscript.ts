@@ -35,9 +35,11 @@ class job extends Person{
   whoYouAre(){
   	return ` ${super.whoYouAre()} and I get ${this.salary} every Month and I work in ${this.jobLocation}`
   }
+
+
 }
 var Personalsituation= new job("John", 22,"Programmer", 2000,"Vienna")
 document.write(Personalsituation.whoYouAre());
 
 	
-
+ export { job }
