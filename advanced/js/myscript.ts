@@ -3,24 +3,31 @@ class Vehicles {
 	number_of_seats = "";
 	fuel_type = "";
 	year_of_production = "";
+	image= "";
 
-	constructor(performance_model, number_of_seats, fuel_type, year_of_production) {
+	constructor(performance_model, number_of_seats, fuel_type, year_of_production,image) {
 		this.performance_model = performance_model;
 		this.number_of_seats = number_of_seats;
 		this.fuel_type = fuel_type;
 		this.year_of_production = year_of_production;
+		this.image =image;
 	}
 
 	vehicleInfo() {
-		return `The vehicles performance model is: ${this.performance_model}
-		The vehicle has ${this.number_of_seats} seats.
-		The vehicle has the fuel type: ${this.fuel_type}
-		The vehicle was produced in the year: ${this.year_of_production}`;
+		return `<h1>The vehicles performance model is: ${this.performance_model}</h1>
+		<P>The vehicle has ${this.number_of_seats} seats.</P>
+		<P>The vehicle has the fuel type: ${this.fuel_type}<P>
+		<P>The vehicle was produced in the year: ${this.year_of_production}</P>
+		<img src="${this.image}">`;
 	}
+<<<<<<< HEAD
+	
+=======
 
 	calcPrice() {
 		return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
 	}
+>>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
 }
 
 
@@ -40,13 +47,9 @@ class Motor extends Vehicles {
 	}
 }
 
-<<<<<<< HEAD
-
-	
-	
 	
 
-=======
+
 class Truck extends Vehicles {
 	cargo_area;
 	mass;
@@ -75,8 +78,23 @@ console.log(truck.vehicleInfo());
 
 
 
+
+    
+
+ 
+
+
+
+
+
+=======
+<<<<<<< HEAD
+
+
+
 //Function calculation
 
 =======
 >>>>>>> 74a8b4f69dc2681e25454a7af327d9550cee22c5
 >>>>>>> 642e25baf931c94700bf275662327c5d5544a08c
+>>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
