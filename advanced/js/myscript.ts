@@ -58,7 +58,7 @@ class Truck extends Vehicles {
 	}
 
 vehicleInfo() {
-		return `${super.vehicleInfo()} 	This vehicle has a caro area of: ${this.cargo_area} square meters.
+		return `${super.vehicleInfo()} 	This vehicle has a cargo area of: ${this.cargo_area} square meters.
 										This vehicle has a mass of: ${this.mass}`;
 	}
 }
