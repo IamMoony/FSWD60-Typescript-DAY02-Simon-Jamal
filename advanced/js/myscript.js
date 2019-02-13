@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -27,6 +27,9 @@ var Vehicles = /** @class */ (function () {
     Vehicles.prototype.vehicleInfo = function () {
         return "<h1>The vehicles performance model is: " + this.performance_model + "</h1>\n\t\t<P>The vehicle has " + this.number_of_seats + " seats.</P>\n\t\t<P>The vehicle has the fuel type: " + this.fuel_type + "<P>\n\t\t<P>The vehicle was produced in the year: " + this.year_of_production + "</P>\n\t\t<img src=\"" + this.image + "\">";
     };
+    Vehicles.prototype.calcPrice = function () {
+        return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
+    };
     return Vehicles;
 }());
 var Motor = /** @class */ (function (_super) {
@@ -38,10 +41,11 @@ var Motor = /** @class */ (function (_super) {
         return _this;
     }
     Motor.prototype.vehicleInfo = function () {
-        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a seigt height of: " + this.seat_height + " inches.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has " + this.ccm + " ccm.\t";
+        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a height of: " + this.seat_height + " inches.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has " + this.ccm + " ccm.\t";
     };
     return Motor;
 }(Vehicles));
+<<<<<<< HEAD
 var Truck = /** @class */ (function (_super) {
     __extends(Truck, _super);
     function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass) {
@@ -61,3 +65,5 @@ var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
 console.log(motorbikes.vehicleInfo());
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
 console.log(truck.vehicleInfo());
+=======
+>>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3

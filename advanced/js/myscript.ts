@@ -20,7 +20,14 @@ class Vehicles {
 		<P>The vehicle was produced in the year: ${this.year_of_production}</P>
 		<img src="${this.image}">`;
 	}
+<<<<<<< HEAD
 	
+=======
+
+	calcPrice() {
+		return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
+	}
+>>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
 }
 
 
@@ -35,7 +42,7 @@ class Motor extends Vehicles {
 	}
 
 	vehicleInfo() {
-		return `${super.vehicleInfo()} 	This vehicle has a seigt height of: ${this.seat_height} inches.
+		return `${super.vehicleInfo()} 	This vehicle has a height of: ${this.seat_height} inches.
 										This vehicle has ${this.ccm} ccm.	`;
 	}
 }
@@ -67,6 +74,7 @@ console.log(motorbikes.vehicleInfo());
 
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000)
 console.log(truck.vehicleInfo());
+<<<<<<< HEAD
 
 
 
@@ -79,3 +87,14 @@ console.log(truck.vehicleInfo());
 
 
 
+=======
+<<<<<<< HEAD
+
+
+
+//Function calculation
+
+=======
+>>>>>>> 74a8b4f69dc2681e25454a7af327d9550cee22c5
+>>>>>>> 642e25baf931c94700bf275662327c5d5544a08c
+>>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
