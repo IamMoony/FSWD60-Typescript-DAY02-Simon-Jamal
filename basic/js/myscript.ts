@@ -37,7 +37,7 @@ class job extends Person{
   }
 }
 var Personalsituation= new job("John", 22,"Programmer", 2000,"Vienna")
-console.log(Personalsituation.whoYouAre());
+document.write(Personalsituation.whoYouAre());
 
 	
 

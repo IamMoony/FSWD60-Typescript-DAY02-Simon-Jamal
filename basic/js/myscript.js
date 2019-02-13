@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || (function () {
             ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
             function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
         return extendStatics(d, b);
-    }
+    };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -42,5 +42,5 @@ var job = /** @class */ (function (_super) {
     };
     return job;
 }(Person));
-var jobsituation = new job("John", 22, "Programmer", 2000, "Vienna");
-console.log(jobsituation.whoYouAre());
+var Personalsituation = new job("John", 22, "Programmer", 2000, "Vienna");
+document.write(Personalsituation.whoYouAre());
