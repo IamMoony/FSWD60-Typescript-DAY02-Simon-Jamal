@@ -27,19 +27,35 @@ var Vehicles = /** @class */ (function () {
     };
     return Vehicles;
 }());
-var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
-console.log(vehicleDetails.vehicleInfo());
 var Motor = /** @class */ (function (_super) {
     __extends(Motor, _super);
-    function Motor(performance_model, numbers_of_seats, fuel_type, year_of_production, motortype) {
+    function Motor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm) {
         var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production) || this;
-        _this.motortype = motortype;
+        _this.seat_height = seat_height;
+        _this.ccm = ccm;
         return _this;
     }
     Motor.prototype.vehicleInfo = function () {
-        return _super.prototype.vehicleInfo.call(this) + " This vehicle has the motortype of " + this.motortype;
+        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a seigt height of: " + this.seat_height + " inches.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has " + this.ccm + " ccm.\t";
     };
     return Motor;
 }(Vehicles));
-// class Truck extends Vehicles {
-// }
+var Truck = /** @class */ (function (_super) {
+    __extends(Truck, _super);
+    function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass) {
+        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production) || this;
+        _this.cargo_area = cargo_area;
+        _this.mass = mass;
+        return _this;
+    }
+    Truck.prototype.vehicleInfo = function () {
+        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a caro area of: " + this.cargo_area + " square meters.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has a mass of: " + this.mass;
+    };
+    return Truck;
+}(Vehicles));
+var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
+console.log(vehicleDetails.vehicleInfo());
+var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
+console.log(motorbikes.vehicleInfo());
+var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
+console.log(truck.vehicleInfo());

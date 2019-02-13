@@ -19,22 +19,44 @@ class Vehicles {
 	}
 }
 
-var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018)
-console.log(vehicleDetails.vehicleInfo());
 
 class Motor extends Vehicles {
-	motortype;
+	seat_height;
+	ccm;
 
-	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, motortype) {
+	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm) {
 		super(performance_model, numbers_of_seats, fuel_type, year_of_production);
-		this.motortype = motortype;
+		this.seat_height = seat_height;
+		this.ccm = ccm;
 	}
 
 	vehicleInfo() {
-		return `${super.vehicleInfo()} This vehicle has the motortype of ${this.motortype}`;
+		return `${super.vehicleInfo()} 	This vehicle has a seigt height of: ${this.seat_height} inches.
+										This vehicle has ${this.ccm} ccm.	`;
 	}
 }
 
-// class Truck extends Vehicles {
+class Truck extends Vehicles {
+	cargo_area;
+	mass;
 
-// }
+	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area ,mass) {
+		super(performance_model, numbers_of_seats, fuel_type, year_of_production)
+		this.cargo_area = cargo_area;
+		this.mass = mass;
+	}
+
+vehicleInfo() {
+		return `${super.vehicleInfo()} 	This vehicle has a caro area of: ${this.cargo_area} square meters.
+										This vehicle has a mass of: ${this.mass}`;
+	}
+}
+
+var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
+console.log(vehicleDetails.vehicleInfo());
+
+var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
+console.log(motorbikes.vehicleInfo());
+
+var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000)
+console.log(truck.vehicleInfo());
