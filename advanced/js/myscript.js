@@ -43,23 +43,3 @@ var Motor = /** @class */ (function (_super) {
     };
     return Motor;
 }(Vehicles));
-var Truck = /** @class */ (function (_super) {
-    __extends(Truck, _super);
-    function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass) {
-        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production) || this;
-        _this.cargo_area = cargo_area;
-        _this.mass = mass;
-        return _this;
-    }
-    Truck.prototype.vehicleInfo = function () {
-        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a caro area of: " + this.cargo_area + " square meters.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has a mass of: " + this.mass;
-    };
-    return Truck;
-}(Vehicles));
-var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
-console.log(vehicleDetails.vehicleInfo());
-var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
-console.log(motorbikes.vehicleInfo());
-var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
-console.log(truck.vehicleInfo());
-//Function calculation

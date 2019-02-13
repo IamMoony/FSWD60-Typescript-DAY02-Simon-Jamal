@@ -40,6 +40,13 @@ class Motor extends Vehicles {
 	}
 }
 
+<<<<<<< HEAD
+
+	
+	
+	
+
+=======
 class Truck extends Vehicles {
 	cargo_area;
 	mass;
@@ -64,8 +71,12 @@ console.log(motorbikes.vehicleInfo());
 
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000)
 console.log(truck.vehicleInfo());
+<<<<<<< HEAD
 
 
 
 //Function calculation
 
+=======
+>>>>>>> 74a8b4f69dc2681e25454a7af327d9550cee22c5
+>>>>>>> 642e25baf931c94700bf275662327c5d5544a08c
