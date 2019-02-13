@@ -18,7 +18,7 @@ class Vehicles {
 		<P>The vehicle has ${this.number_of_seats} seats.</P>
 		<P>The vehicle has the fuel type: ${this.fuel_type}<P>
 		<P>The vehicle was produced in the year: ${this.year_of_production}</P>
-		<img src="${this.image}">`;
+		<img src="${this.image}" >`;
 	}
 
 
@@ -96,7 +96,4 @@ document.write(truck.vehicleInfo());
 
 //Function calculation
 
-=======
->>>>>>> 74a8b4f69dc2681e25454a7af327d9550cee22c5
->>>>>>> 642e25baf931c94700bf275662327c5d5544a08c
->>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
+
