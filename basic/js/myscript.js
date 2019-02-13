@@ -44,3 +44,4 @@ var job = /** @class */ (function (_super) {
 }(Person));
 var Personalsituation = new job("John", 22, "Programmer", 2000, "Vienna");
 document.write(Personalsituation.whoYouAre());
+

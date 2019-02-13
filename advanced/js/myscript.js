@@ -12,18 +12,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 var Vehicles = /** @class */ (function () {
-    function Vehicles(performance_model, number_of_seats, fuel_type, year_of_production) {
+    function Vehicles(performance_model, number_of_seats, fuel_type, year_of_production, image) {
         this.performance_model = "";
         this.number_of_seats = "";
         this.fuel_type = "";
         this.year_of_production = "";
+        this.image = "";
         this.performance_model = performance_model;
         this.number_of_seats = number_of_seats;
         this.fuel_type = fuel_type;
         this.year_of_production = year_of_production;
+        this.image = image;
     }
     Vehicles.prototype.vehicleInfo = function () {
-        return "The vehicles performance model is: " + this.performance_model + "\n\t\tThe vehicle has " + this.number_of_seats + " seats.\n\t\tThe vehicle has the fuel type: " + this.fuel_type + "\n\t\tThe vehicle was produced in the year: " + this.year_of_production;
+        return "<h1>The vehicles performance model is: " + this.performance_model + "</h1>\n\t\t<P>The vehicle has " + this.number_of_seats + " seats.</P>\n\t\t<P>The vehicle has the fuel type: " + this.fuel_type + "<P>\n\t\t<P>The vehicle was produced in the year: " + this.year_of_production + "</P>\n\t\t<img src=\"" + this.image + "\">";
     };
     return Vehicles;
 }());
@@ -40,8 +42,6 @@ var Motor = /** @class */ (function (_super) {
     };
     return Motor;
 }(Vehicles));
-<<<<<<< HEAD
-=======
 var Truck = /** @class */ (function (_super) {
     __extends(Truck, _super);
     function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass) {
@@ -61,4 +61,3 @@ var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
 console.log(motorbikes.vehicleInfo());
 var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
 console.log(truck.vehicleInfo());
->>>>>>> 74a8b4f69dc2681e25454a7af327d9550cee22c5
