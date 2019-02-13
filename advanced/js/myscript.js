@@ -34,8 +34,8 @@ var Vehicles = /** @class */ (function () {
 }());
 var Motor = /** @class */ (function (_super) {
     __extends(Motor, _super);
-    function Motor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm) {
-        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production) || this;
+    function Motor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm, image) {
+        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production, image) || this;
         _this.seat_height = seat_height;
         _this.ccm = ccm;
         return _this;
@@ -45,25 +45,26 @@ var Motor = /** @class */ (function (_super) {
     };
     return Motor;
 }(Vehicles));
-<<<<<<< HEAD
 var Truck = /** @class */ (function (_super) {
     __extends(Truck, _super);
-    function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass) {
-        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production) || this;
+    function Truck(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area, mass, image) {
+        var _this = _super.call(this, performance_model, numbers_of_seats, fuel_type, year_of_production, image) || this;
         _this.cargo_area = cargo_area;
         _this.mass = mass;
         return _this;
     }
     Truck.prototype.vehicleInfo = function () {
-        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a caro area of: " + this.cargo_area + " square meters.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has a mass of: " + this.mass;
+        return _super.prototype.vehicleInfo.call(this) + " \tThis vehicle has a cargo area of: " + this.cargo_area + " square meters.\n\t\t\t\t\t\t\t\t\t\tThis vehicle has a mass of: " + this.mass;
     };
     return Truck;
 }(Vehicles));
-var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
+var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018, "image/AudiQ8.jpg");
 console.log(vehicleDetails.vehicleInfo());
-var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
+var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800, "image/Motorbike.jpeg");
 console.log(motorbikes.vehicleInfo());
-var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000);
+var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000, "image/Truck.jpeg");
 console.log(truck.vehicleInfo());
-=======
->>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
+document.write(vehicleDetails.vehicleInfo());
+document.write(motorbikes.vehicleInfo());
+document.write(truck.vehicleInfo());
+//Function calculation

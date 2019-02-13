@@ -20,14 +20,12 @@ class Vehicles {
 		<P>The vehicle was produced in the year: ${this.year_of_production}</P>
 		<img src="${this.image}">`;
 	}
-<<<<<<< HEAD
-	
-=======
+
 
 	calcPrice() {
 		return (Number(this.number_of_seats) * 10) + (Number(this.year_of_production) * 50) + (Number(this.seat_height) * 25) + (Number(this.ccm) * 15) + (Number(this.cargo_area) * 5) + (Number(this.mass) * 100);
 	}
->>>>>>> f55298c09ef6b99cb433abf673627f99abb4bfc3
+
 }
 
 
@@ -35,8 +33,8 @@ class Motor extends Vehicles {
 	seat_height;
 	ccm;
 
-	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm) {
-		super(performance_model, numbers_of_seats, fuel_type, year_of_production);
+	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, seat_height, ccm,image) {
+		super(performance_model, numbers_of_seats, fuel_type, year_of_production, image);
 		this.seat_height = seat_height;
 		this.ccm = ccm;
 	}
@@ -54,10 +52,11 @@ class Truck extends Vehicles {
 	cargo_area;
 	mass;
 
-	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area ,mass) {
-		super(performance_model, numbers_of_seats, fuel_type, year_of_production)
+	constructor(performance_model, numbers_of_seats, fuel_type, year_of_production, cargo_area ,mass,image) {
+		super(performance_model, numbers_of_seats, fuel_type, year_of_production, image)
 		this.cargo_area = cargo_area;
 		this.mass = mass;
+
 	}
 
 vehicleInfo() {
@@ -66,15 +65,19 @@ vehicleInfo() {
 	}
 }
 
-var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018);
+var vehicleDetails = new Vehicles("Tesla Model 3", 4, "Electric", 2018, "image/AudiQ8.jpg");
 console.log(vehicleDetails.vehicleInfo());
 
-var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800);
+var motorbikes = new Motor("Kawasaki z900", 1, "Coal", 2011, 2, 800, "image/Motorbike.jpeg");
 console.log(motorbikes.vehicleInfo());
 
-var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000)
+var truck = new Truck("MAN Lions Coach", 6, "Gas", 2015, 10, 1000, "image/Truck.jpeg")
 console.log(truck.vehicleInfo());
-<<<<<<< HEAD
+
+document.write(vehicleDetails.vehicleInfo());
+document.write(motorbikes.vehicleInfo());
+document.write(truck.vehicleInfo());
+
 
 
 
@@ -87,8 +90,7 @@ console.log(truck.vehicleInfo());
 
 
 
-=======
-<<<<<<< HEAD
+
 
 
 
