@@ -35,6 +35,8 @@ class Motor extends Vehicles {
 	}
 }
 
-// class Truck extends Vehicles {
 
-// }
+	
+	
+	
+
